@@ -34,16 +34,7 @@ jobs:
           yarn
       - name: build
         run: |
-          yarn build:js
-      - name: Commit files
-        run: |
-          echo ${GITHUB_ACTOR}
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHubActions"
-          git add --all
-          git commit --allow-empty -m "Bundled output for commit $GITHUB_SHA"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          yarn build:js      
       - name: Create Pull Request
         uses: gr2m/create-or-update-pull-request-action@v1.x
         env:

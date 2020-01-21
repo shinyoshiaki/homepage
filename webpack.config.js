@@ -52,12 +52,4 @@ module.exports = (env) => ({
   performance: {
     hints: false,
   },
-  optimization: {
-    minimizer: [
-      new TerserPlugin({
-        cache: true,
-        parallel: true,
-      }),
-    ],
-  },
 });
