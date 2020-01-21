@@ -41,20 +41,14 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHubActions"
           git add --all
-          git commit --allow-empty -m "deploy"          
-          git push https://"${GITHUB_ACTOR}":"${GITHUB_TOKEN}"@github.com/"${GITHUB_REPOSITORY}".git HEAD:test/oss-action-push
+          git commit --allow-empty -m "Bundled output for commit $GITHUB_SHA"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: deploy-force
-        uses: ad-m/github-push-action@master
+      - name: Create Pull Request
+        uses: gr2m/create-or-update-pull-request-action@v1.x
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: 'master'
-          force: true
-      - name: deploy
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: 'master'
+          author: 'GitHubActions <action@github.com>'
     env:
       CI: true
