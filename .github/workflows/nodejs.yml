@@ -1,0 +1,21 @@
+name: Node CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: hmarr/auto-approve-action@v2.0.0
+      with:
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
+    - name: merge pull request
+      uses: sudo-bot/action-pull-request-merge@v1.0.3
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        number: ${{ github.event.pull_request.number }}
+        allowed-usernames-regex: ^github-actions$
+        filter-label: merge-it
+
