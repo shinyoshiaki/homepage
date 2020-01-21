@@ -6,6 +6,7 @@ homepage
 yarn-error.log
 package-lock.json
 coverage
+preact_build
 
 #dot net
 bin/
