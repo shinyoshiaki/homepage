@@ -76,3 +76,7 @@ npm run test # For npm
 ```
 
 `__tests__`和`preact`有测试用例。
+
+### Build
+
+ビルドは GithubActions 上で行われるので、ローカルで行う必要はありません。

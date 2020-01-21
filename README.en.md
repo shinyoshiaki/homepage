@@ -76,6 +76,10 @@ yarn start
 yarn format
 ```
 
+### Build
+
+ビルドは GithubActions 上で行われるので、ローカルで行う必要はありません。
+
 ### Testing
 
 ```
