@@ -8,7 +8,7 @@ on:
 jobs:  
   build:
     runs-on: ubuntu-latest
-    if: github.actor == 'shinyoshiaki'
+    if: github.actor == 'omegasisters'
     strategy:
       matrix:
         node-version: [12.x]
@@ -39,7 +39,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add --all
-          git commit -m "Add changes"          
+          git commit -m "deploy"
       - name: deploy        
         uses: ad-m/github-push-action@master
         with:
