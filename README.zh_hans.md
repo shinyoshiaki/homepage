@@ -2,7 +2,7 @@
 
 # 一起来建 “Omesys 主页”！
 
-[![](https://github.com/omegasisters/homepage/workflows/build/badge.svg)](https://github.com/omegasisters/homepage/actions)
+[![](https://github.com/omegasisters/homepage/workflows/test/badge.svg)](https://github.com/omegasisters/homepage/actions)
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/omegasisters/homepage.svg)](http://isitmaintained.com/project/omegasisters/homepage 'Percentage of issues still open')
 
 第一回“只用 Pull Request 来更新欧米茄姐妹(Omesys)的主页会怎样？”企划
@@ -72,6 +72,13 @@ npm run start # npm
 
 托管在 http://localhost:8080
 
+编辑源代码时，请在 git push 之前进行构建：
+
+```
+For yarn build # yarn
+npm run build # For npm
+```
+
 ## 测试（Node.js）
 
 您可以使用以下命令进行测试。
@@ -82,7 +89,3 @@ npm run test # For npm
 ```
 
 `__tests__`和`preact`有测试用例。
-
-### Build
-
-ビルドは GithubActions 上で行われるので、ローカルで行う必要はありません。

@@ -2,7 +2,7 @@
 
 # みんなでつくろう「おめシスホームページ」！
 
-[![](https://github.com/omegasisters/homepage/workflows/build/badge.svg)](https://github.com/omegasisters/homepage/actions)
+[![](https://github.com/omegasisters/homepage/workflows/test/badge.svg)](https://github.com/omegasisters/homepage/actions)
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/omegasisters/homepage.svg)](http://isitmaintained.com/project/omegasisters/homepage 'Percentage of issues still open')
 
 みんなで作るおめがシスターズのホームページです
@@ -79,9 +79,13 @@ yarn start
 yarn format
 ```
 
-### ビルド
+### Push する前にすること
 
-ビルドは GithubActions 上で行われるので、ローカルで行う必要はありません。
+ソースコードを編集した後、Push する前にビルドを行ってください
+
+```
+yarn build
+```
 
 ### テストコードを実行する
 

@@ -2,7 +2,7 @@
 
 # Let's make "Omega Sisters(Omesis) Homepage"!
 
-[![](https://github.com/omegasisters/homepage/workflows/build/badge.svg)](https://github.com/omegasisters/homepage/actions)
+[![](https://github.com/omegasisters/homepage/workflows/test/badge.svg)](https://github.com/omegasisters/homepage/actions)
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/omegasisters/homepage.svg)](http://isitmaintained.com/project/omegasisters/homepage 'Percentage of issues still open')
 
 A participatory Omega Sisters(Omesis) Homepage creation project.
@@ -82,9 +82,13 @@ yarn start
 yarn format
 ```
 
-### Build
+### Things to do before pushing
 
-ビルドは GithubActions 上で行われるので、ローカルで行う必要はありません。
+After editing the source code, please build before pushing.
+
+```
+yarn build
+```
 
 ### Testing
 
