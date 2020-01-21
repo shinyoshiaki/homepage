@@ -141,10 +141,6 @@ MMMMMMMMMMMMMMMMMMMMMMMMMNNmaggkwkkXuuVVXuuXXkkXuuZuXVuVCXwkwQggggNNMMMMMMMMMMMM
     style="background-color: #1e2a55"
     class="drawer drawer--top drawer--navbarTopGutter"
   >
-    <div
-      style="position: fixed;z-index: 9999;left: 1rem;top: 1rem;"
-      id="preact-i18n"
-    ></div>
     <header class="drawer-navbar drawer-navbar--fixed" role="banner">
       <div class="drawer-container">
         <div class="drawer-navbar-header">
@@ -154,7 +150,7 @@ MMMMMMMMMMMMMMMMMMMMMMMMMNNmaggkwkkXuuVVXuuXXkkXuuZuXVuVCXwkwQggggNNMMMMMMMMMMMM
           </button>
         </div>
         <nav class="drawer-nav" role="navigation">
-          <ul id="header_contents" class="drawer-menu drawer-menu--right">
+          <ul id="header_contents" class="drawer-menu">
             <!--      各項目へのジャンプ用ヘッダです。-->
             <!--      section_titleクラスを付与したh2要素をジャンプ用タイトルとして使用する想定です。-->
             <li>
@@ -223,6 +219,7 @@ MMMMMMMMMMMMMMMMMMMMMMMMMNNmaggkwkkXuuVVXuuXXkkXuuZuXVuVCXwkwQggggNNMMMMMMMMMMMM
                 >お問い合わせ</a
               >
             </li>
+            <div id="preact-i18n" style="display: inline;"></div>
           </ul>
         </nav>
       </div>
@@ -288,7 +285,9 @@ MMMMMMMMMMMMMMMMMMMMMMMMMNNmaggkwkkXuuVVXuuXXkkXuuZuXVuVCXwkwQggggNNMMMMMMMMMMMM
           </div>
         </section>
         <section class="section introduction">
-          <h2 class="section_title" id="section_description"></h2>
+          <h2 class="section_title" id="section_description">
+            <span id="description"></span>
+          </h2>
           <div class="box about-us">
             <p>
               <span id="section_description_omesis_ray"></span>
@@ -498,7 +497,7 @@ MMMMMMMMMMMMMMMMMMMMMMMMMNNmaggkwkkXuuVVXuuXXkkXuuZuXVuVCXwkwQggggNNMMMMMMMMMMMM
         <div class="box">
           <i class="fab fa-youtube"></i>
           <a
-            id="section_contributors"
+            id="section_contributors_list"
             href="https://omegasisters.github.io/homepage/pages/contributors.html"
             target="_blank"
             rel="noopener noreferrer"
@@ -508,8 +507,6 @@ MMMMMMMMMMMMMMMMMMMMMMMMMNNmaggkwkkXuuVVXuuXXkkXuuZuXVuVCXwkwQggggNNMMMMMMMMMMMM
         <div class="video_box">
           <div class="video_wrapper">
             <iframe
-              width="560"
-              height="315"
               src="https://www.youtube.com/embed/5h1NoX3my0s"
               frameborder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -552,6 +549,10 @@ MMMMMMMMMMMMMMMMMMMMMMMMMNNmaggkwkkXuuVVXuuXXkkXuuZuXVuVCXwkwQggggNNMMMMMMMMMMMM
     ></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"
       defer
     ></script>
     <script
