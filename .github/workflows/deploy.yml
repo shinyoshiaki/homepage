@@ -3,7 +3,8 @@ name: deploy
 on:
   push:
     branches:
-      - master      
+      - master  
+      - 'feature/**'    
 
 jobs:  
   build:
@@ -39,7 +40,10 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHubActions"
           git add --all
-          git commit --allow-empty -m "deploy"
+          git commit -m "deploy"
+      - catch no commit:
+        if: failure()
+        run: echo "nothing to commit"
       - name: deploy        
         uses: ad-m/github-push-action@master
         with:
