@@ -41,7 +41,7 @@ jobs:
           git config --local user.name "GitHubActions"
           git add --all
           git commit -m "deploy"
-      - catch_no_commit:
+      - name: catch no commit
         if: failure()
         run: echo "nothing to commit"
       - name: deploy        
