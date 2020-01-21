@@ -76,14 +76,6 @@ yarn start
 yarn format
 ```
 
-### Things to do before pushing
-
-After editing the source code, please build before pushing.
-
-```
-yarn build
-```
-
 ### Testing
 
 ```
